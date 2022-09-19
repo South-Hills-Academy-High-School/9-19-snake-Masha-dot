@@ -130,8 +130,8 @@ game.onUpdate(function () {
         if (!(value == snakebody[1]) && !(value == snakebody[0]) && snakehead.overlapsWith(value)) {
             game.over(false)
         }
-        if (snakeheadx < 0 || (snakeheadx > 0 || (snakeheady < 0 || snakeheady < 0))) {
-            game.over(false)
-        }
+    }
+    if (snakeheadx < 0 || (snakeheadx > 160 || (snakeheady < 0 || snakeheady > 120))) {
+        game.over(false)
     }
 })
